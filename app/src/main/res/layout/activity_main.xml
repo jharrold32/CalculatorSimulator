@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.bindlesoft.calculatorsimulator.about"
+    android:background="#ffffffff">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:background="#00ffffff"
+        android:layout_weight="2">
+
+        <TextView
+
+
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/diplay_initial"
+            android:id="@+id/mainDisplay"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@drawable/calc_sim_main_display"
+            android:textAlignment="textEnd"
+            android:textSize="45sp"
+            android:textColor="#000000"
+            android:layout_width="fill_parent"
+            android:layout_columnSpan="5"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:gravity="top|left" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/imgSolar"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:background="@drawable/calc_sim_main_solar_panel"
+            android:scaleType="center"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/solarPanelDesc"
+            android:layout_columnSpan="2"
+            android:layout_weight="2" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/butOptions"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_options"
+            android:clickable="true"
+            android:onClick="options"
+
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton2"
+            android:layout_weight="1"
+            android:background="#00ffffff" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton3"
+            android:layout_weight="1"
+            android:background="#00ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageButton
+
+            android:id="@+id/butPOV"
+            android:layout_row="2"
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:layout_column="0"
+            android:background="@drawable/calc_sim_main_pov"
+            android:onClick="SetPOV"
+            android:contentDescription="@string/descPOV"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:longClickable="false"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:maxHeight="65dp"
+            android:maxWidth="65dp"
+            android:minHeight="65dp"
+            android:minWidth="65dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butAudio"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:background="@drawable/calc_sim_main_sound_disabled"
+            android:onClick="toggleSound"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:id="@+id/butInverse"
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_inverse"
+            android:onClick="inverse"
+            android:clickable="true"
+
+            android:baselineAlignBottom="false"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:id="@+id/butParenthesis"
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_parenthesis"
+            android:onClick="parenthesis"
+            android:clickable="true"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:id="@+id/butBackspace"
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:layout_row="2"
+            android:layout_column="4"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_backspace"
+            android:onClick="backspace"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butSqrRoot"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_squareroot"
+            android:onClick="squareRoot"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butExponential"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_exponential"
+            android:onClick="exponential"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butLog"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_log"
+            android:onClick="log"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butFactorial"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_factorial"
+            android:onClick="factorial"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butClear"
+            android:layout_row="3"
+            android:layout_column="4"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_clear"
+            android:onClick="clearDisplay"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageButton
+
+            android:id="@+id/butSquare"
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_square"
+            android:clickable="true"
+            android:onClick="square"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butSin"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_sin"
+            android:onClick="sin"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butCos"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_cos"
+            android:onClick="cos"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butTan"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_tan"
+            android:onClick="tan"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butDivide"
+            android:layout_row="4"
+            android:layout_column="4"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_divide"
+            android:onClick="divide"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butPi"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_pi"
+            android:onClick="pi"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butSeven"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_seven"
+            android:onClick="seven"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butEight"
+            android:layout_row="5"
+            android:layout_column="2"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_eight"
+            android:onClick="eight"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butNine"
+            android:layout_row="5"
+            android:layout_column="3"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_nine"
+            android:onClick="nine"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butMultiply"
+            android:layout_row="5"
+            android:layout_column="4"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_multiply"
+            android:onClick="multiply"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butRCL"
+            android:layout_row="6"
+            android:layout_column="0"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_rcl"
+            android:onClick="recall"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butFour"
+            android:layout_row="6"
+            android:layout_column="1"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_four"
+            android:onClick="four"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:id="@+id/butFive"
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:layout_row="6"
+            android:layout_column="2"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_five"
+            android:onClick="five"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:id="@+id/butSix"
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:layout_row="6"
+            android:layout_column="3"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_six"
+            android:onClick="six"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:id="@+id/butMinus"
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:layout_row="6"
+            android:layout_column="4"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_minus"
+            android:onClick="minus"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageButton
+
+            android:id="@+id/butStore"
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:layout_row="7"
+            android:layout_column="0"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_store"
+            android:onClick="store"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butOne"
+            android:layout_row="7"
+            android:layout_column="1"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_one"
+            android:onClick="one"
+            android:contextClickable="false"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butTwo"
+            android:layout_row="7"
+            android:layout_column="2"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_two"
+            android:onClick="two"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butThree"
+            android:layout_row="7"
+            android:layout_column="3"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_three"
+            android:onClick="three"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butPlus"
+            android:layout_row="7"
+            android:layout_column="4"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_plus"
+            android:onClick="plus"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butAlt"
+            android:layout_row="8"
+            android:layout_column="0"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_alt"
+            android:onClick="alt"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butOpposite"
+            android:layout_row="9"
+            android:layout_column="1"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_opposite"
+            android:onClick="opposite"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:id="@+id/butZero"
+            android:layout_row="8"
+            android:layout_column="3"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_zero"
+            android:onClick="zero"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butDecimal"
+            android:layout_row="9"
+            android:layout_column="4"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_decimal"
+            android:onClick="decimal"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:id="@+id/butEquals"
+            android:layout_row="9"
+            android:layout_column="5"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="@drawable/calc_sim_main_equals"
+            android:onClick="equals"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>
